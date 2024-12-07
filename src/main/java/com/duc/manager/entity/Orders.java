@@ -1,5 +1,6 @@
 package com.duc.manager.entity;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -23,6 +24,7 @@ public class Orders {
 
     @OneToMany(mappedBy = "orders")
     @JsonIgnore
+
     private List<OrderDetails> orderDetailsList;
 
     private double totalMoney;
